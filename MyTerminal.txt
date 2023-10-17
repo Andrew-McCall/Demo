@@ -1,0 +1,124 @@
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git
+$ git clone https://github.com/Andrew-McCall/Demo
+Cloning into 'Demo'...
+warning: You appear to have cloned an empty repository.
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git
+$ cd Demo
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ ls
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ echo "Test" > test.txt
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git add .
+warning: in the working copy of 'test.txt', LF will be replaced by CRLF the next time Git touches it
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git commit -m "Created a file"
+[main (root-commit) 96e15e3] Created a file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Andrew-McCall/Demo
+ * [new branch]      main -> main
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git add .
+warning: in the working copy of 'test.txt', LF will be replaced by CRLF the next time Git touches it
+g
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   test.txt
+
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git commit -m "Added command explanation"
+[main d5528fa] Added command explanation
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 384 bytes | 384.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Andrew-McCall/Demo
+   96e15e3..d5528fa  main -> main
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    test.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ReadMe.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git add .
+warning: in the working copy of 'ReadMe.md', LF will be replaced by CRLF the next time Git touches it
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    test.txt -> ReadMe.md
+
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git commit -m "Renamed file to be readme"
+[main e4f06e4] Renamed file to be readme
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename test.txt => ReadMe.md (100%)
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (2/2), 245 bytes | 245.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Andrew-McCall/Demo
+   d5528fa..e4f06e4  main -> main
+
+Work@TALUS MINGW64 /t/Work/Documents/Scripts/QA/Git/Demo (main)
+$
